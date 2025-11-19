@@ -2,57 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Joaquin Valley Town Hall</title>
-    <link rel="stylesheet" href="town.css">
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
 
-<div id="wrapper">
+<header>
+    <img src="town_hall_logo.gif" alt="Town Hall Logo">
+    <h2>San Joaquin Valley Town Hall</h2>
+    <h3>Celebrating our <strong>75th</strong> Year</h3>
+</header>
 
-    <header>
-        <img src="town_hall_logo.png" alt="Town Hall Logo">
-        <div class="title">
-            <h1>San Joaquin Valley Town Hall</h1>
-            <h2>Celebrating our 75<sup>th</sup> Year</h2>
-        </div>
-    </header>
+<!-- HAMBURGER NAV BUTTON -->
+<nav class="navbar">
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li class="dropdown">
-                <a href="#">Speakers ▾</a>
-                <ul class="submenu">
-                    <li><a href="#">October</a></li>
-                    <li><a href="#">November</a></li>
-                    <li><a href="#">December</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Luncheons</a></li>
-            <li><a href="#">Tickets</a></li>
-            <li><a href="#">About Us</a></li>
-        </ul>
-    </nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-btn">&#9776;</label>
 
-    <main>
+    <ul class="menu">
+
+        <li><a class="current" href="#">Home</a></li>
+
+        <li class="has-submenu">
+            <a href="#">Speakers</a>
+            <ul class="submenu">
+                <li><a href="brancaccio.html">David Brancaccio</a></li>
+                <li><a href="sorkin.html">Andrew Ross Sorkin</a></li>
+                <li><a href="chua.html">Amy Chua</a></li>
+                <li><a href="sampson.html">Scott Sampson</a></li>
+            </ul>
+        </li>
+
+        <li class="has-submenu">
+            <a href="#">About Us</a>
+            <ul class="submenu">
+                <li><a href="#">Our History</a></li>
+                <li><a href="#">Board Members</a></li>
+                <li><a href="#">Newsletters</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">Get Tickets</a></li>
+        <li><a href="#">Contact</a></li>
+
+    </ul>
+</nav>
+
+<main>
+    <aside>
+        <h2>Guest speakers</h2>
+
+        <h3>October<br>
+            <a href="brancaccio.html">David Brancaccio</a>
+        </h3>
+        <img src="brancaccio75.jpg" alt="David Brancaccio">
+
+        <h3>November<br>
+            <a href="sorkin.html">Andrew Ross Sorkin</a>
+        </h3>
+        <img src="sorkin75.jpg" alt="Andrew Ross Sorkin">
+
+        <h3>January<br>
+            <a href="chua.html">Amy Chua</a>
+        </h3>
+        <img src="chua75.jpg" alt="Amy Chua">
+
+        <h3>February<br>
+            <a href="sampson.html">Scott Sampson</a>
+        </h3>
+        <img src="sampson75.jpg" alt="Scott Sampson">
+    </aside>
+
+    <section>
+        <h1>Featured Speaker</h1>
+        <h2>Fossil Threads in Web of Life</h2>
+
+        <article class="featured">
+            <p>February 2025</p>
+            <h2>Scott Sampson</h2>
+            <img src="sampson_dinosaur.jpg" alt="Sampson's Dinosaur">
+            <p>What's 75 million years old and brand spanking new? A teenage Utahceratops! ...</p>
+            <p><a href="sampson.html">More Information...</a></p>
+        </article>
+
         <h2>Our Mission</h2>
-        <p>
-            San Joaquin Valley Town Hall is a non-profit organization that is run by
-            an all-volunteer board of directors. Our mission is to bring nationally
-            and internationally renowned, thought-provoking speakers who inform,
-            educate, and entertain our audience!
-        </p>
+        <p>San Joaquin Valley Town Hall is a non-profit organization...</p>
 
-        <h2>Featured Speaker</h2>
-        <p>Details about the featured speaker go here.</p>
-    </main>
+        <blockquote>
+            <q>The Town Hall provides a forum for discussion of world issues.</q>
+        </blockquote>
 
-    <footer>
-        <p>© 2024 San Joaquin Valley Town Hall</p>
-    </footer>
+        <h2>Our Ticket Packages</h2>
+        <ul>
+            <li>Season Ticket Holders</li>
+            <li>Group Ticket Packages</li>
+            <li>Single Event Tickets</li>
+        </ul>
+    </section>
+</main>
 
-</div>
+<footer>
+    <p>&copy; 2025 San Joaquin Valley Town Hall</p>
+</footer>
 
 </body>
 </html>
+
