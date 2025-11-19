@@ -1,181 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+/* Page wrapper & border */
+#wrapper {
+    width: 900px;
+    margin: 20px auto;
+    border: 2px solid #000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* HEADER – MOBILE FIRST */
+/* HEADER */
 header {
-    text-align: center;
-    background: #eee;
+    background-color: #f7e7a1; /* yellow bar */
+    display: flex;
+    align-items: center;
     padding: 15px;
 }
 
 header img {
-    display: none; /* hidden on mobile */
-    width: 110px;
+    width: 100px;
 }
 
-/* NAVIGATION – MOBILE FIRST */
-.navbar {
-    background: #5a2d2d;
+header .title {
+    margin-left: 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header h2 {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+
+/* NAVIGATION BAR */
+nav {
+    background-color: #803e39; /* dark red bar */
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
     position: relative;
 }
 
-/* hamburger icon */
-.menu-btn {
-    font-size: 30px;
-    padding: 10px;
-    color: white;
-    cursor: pointer;
-    display: block; /* visible on mobile */
-}
-
-/* hide checkbox */
-#menu-toggle {
-    display: none;
-}
-
-/* menu hidden on mobile */
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    left: 0;
-    background: #5a2d2d;
-    width: 40%;
-}
-
-/* links */
-.menu li a {
+nav ul li a {
     display: block;
-    padding: 10px;
+    padding: 12px 20px;
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* show menu when hamburger clicked */
-#menu-toggle:checked ~ .menu {
-    display: flex;
+/* HOVER EFFECTS */
+nav ul li a:hover {
+    background-color: #5d2722;
 }
 
-/* hamburger → X */
-#menu-toggle:checked + .menu-btn::after {
-    content: "✖";
-    margin-left: 10px;
-}
-
-/* SUBMENU – MOBILE FIRST */
+/* DROP DOWN */
 .submenu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
     display: none;
-    background: #6b3535;
+    position: absolute;
+    background-color: #803e39;
+    top: 40px;
+    left: 0;
+    min-width: 150px;
+    border: 1px solid #000;
 }
 
-.menu li:hover > .submenu {
+.submenu li a {
+    padding: 10px;
+}
+
+.dropdown:hover .submenu {
     display: block;
 }
 
-/* arrow on items with submenu */
-.menu > li > .submenu li a::after {
-    content: "▶";
-    float: right;
-}
-
-/* MAIN CONTENT – MOBILE FIRST: 1-COLUMN, section first */
+/* MAIN CONTENT */
 main {
-    display: flex;
-    flex-direction: column-reverse;
-    padding: 15px;
+    padding: 20px 30px;
 }
 
-section {
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 15px;
-}
-
-aside {
-    padding-top: 15px;
+main h2 {
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-top: 25px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
     padding: 15px;
-    background: #eee;
-}
-
-/* ======================================================
-   BREAKPOINT 1 – LAYOUT (TABLET/DESKTOP)
-   ====================================================== */
-@media (min-width: 768px) {
-
-    main {
-        flex-direction: row; /* 2 columns */
-    }
-
-    section {
-        flex-basis: 70%;
-        border-bottom: none;
-    }
-
-    aside {
-        flex-basis: 30%;
-    }
-}
-
-/* ======================================================
-   BREAKPOINT 2 – NAVIGATION (STOP WRAPPING)
-   ====================================================== */
-@media (min-width: 900px) {
-
-    .menu-btn {
-        display: none; /* hide hamburger */
-    }
-
-    .menu {
-        display: flex !important;
-        position: relative;
-        flex-direction: row;
-        width: 100%;
-    }
-
-    .navbar a {
-        margin: 0 2px;
-    }
-
-    /* submenu appears under the parent */
-    .submenu {
-        position: absolute;
-        top: auto;
-        left: auto;
-        display: none;
-    }
-
-    .menu > li:hover > .submenu {
-        display: block;
-    }
-
-    /* down arrow instead of right arrow */
-    .submenu li a::after {
-        content: "▼";
-        float: right;
-    }
-}
-
-
-@media (min-width: 1100px) {
-
-    header {
-        text-align: left;
-    }
-
-    header img {
-        display: block;
-    }
+    border-top: 2px solid #000;
+    background-color: #f2f2f2;
 }
