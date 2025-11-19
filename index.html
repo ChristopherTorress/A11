@@ -2,68 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Joaquin Valley Town Hall</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="town.css">
 </head>
 
 <body>
-<header>
-    <img src="images/town_hall_logo.png" alt="Town Hall Logo">
-    <h1>San Joaquin Valley Town Hall</h1>
-    <h2>Celebrating our 75<sup>th</sup> Year</h2>
-</header>
 
-<nav class="navbar">
-    <!-- hamburger menu -->
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-btn">&#9776;</label>
+<div id="wrapper">
 
-    <ul class="menu">
-        <li><a href="#">Home</a></li>
+    <header>
+        <img src="town_hall_logo.png" alt="Town Hall Logo">
+        <div class="title">
+            <h1>San Joaquin Valley Town Hall</h1>
+            <h2>Celebrating our 75<sup>th</sup> Year</h2>
+        </div>
+    </header>
 
-        <li>
-            <a href="#">Speakers</a>
-            <ul class="submenu">
-                <li><a href="#">October</a></li>
-                <li><a href="#">November</a></li>
-                <li><a href="#">December</a></li>
-            </ul>
-        </li>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+                <a href="#">Speakers ▾</a>
+                <ul class="submenu">
+                    <li><a href="#">October</a></li>
+                    <li><a href="#">November</a></li>
+                    <li><a href="#">December</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Luncheons</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+    </nav>
 
-        <li><a href="#">Luncheons</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="#">About Us</a></li>
-    </ul>
-</nav>
-
-<main>
-    <section>
+    <main>
         <h2>Our Mission</h2>
         <p>
-            San Joaquin Valley Town Hall is a non-profit organization that is run by an
-            all-volunteer board of directors. Our mission is to bring nationally and
-            internationally renowned speakers who inform, educate, and entertain our audience!
+            San Joaquin Valley Town Hall is a non-profit organization that is run by
+            an all-volunteer board of directors. Our mission is to bring nationally
+            and internationally renowned, thought-provoking speakers who inform,
+            educate, and entertain our audience!
         </p>
 
         <h2>Featured Speaker</h2>
         <p>Details about the featured speaker go here.</p>
-    </section>
+    </main>
 
-    <aside>
-        <h3>Guest speakers</h3>
-        <p><strong>October</strong><br>
-            <a href="#">David Brancaccio</a></p>
+    <footer>
+        <p>© 2024 San Joaquin Valley Town Hall</p>
+    </footer>
 
-        <p><strong>November</strong><br>
-            <a href="#">Angela Sorby</a></p>
-    </aside>
-</main>
-
-<footer>
-    <p>&copy; 2024 San Joaquin Valley Town Hall</p>
-</footer>
+</div>
 
 </body>
 </html>
-
